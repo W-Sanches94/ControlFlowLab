@@ -12,48 +12,28 @@ public class SecretNumber {
         // generate random number.
 
         Random rand = new Random();
-        int upperbound = 100;
-        int secretInt = rand.nextInt(upperbound);
-        System.out.println(secretInt);
+        int secretInt = rand.nextInt(101) + 1;
+        System.out.println("system's secret number: " + secretInt);
 
         // use scanner to accept input.
 
         Scanner reader = new Scanner(System.in);
-        int userGuess = Integer.parseInt(reader.nextLine());
-        System.out.println("Your guess was: " + userGuess);
 
-        //let user know if the userGuess was too high or too low.
-        //set a winState boolean
+        // let user know if the userGuess was too high or too low.
 
+        while (true) {
 
-        String winState = "Congratulations! You won!".toUpperCase();
-        String loseState = "Please try again";
+            int userGuess = Integer.parseInt(reader.nextLine());
+            System.out.println("Your guess was: " + userGuess);
 
-
-        if (userGuess == secretInt){
-            System.out.println(winState);
-        } else if (userGuess < secretInt) {
-            System.out.println("A little too low, guess higher!");
-        } else if (userGuess > secretInt) {
-            System.out.println("A little too high, guess lower!");
+            if (userGuess == secretInt) {
+                System.out.println("Congratulations! ".toUpperCase() + "Guess you really are lucky");
+                break;
+            } else if (userGuess < secretInt) {
+                System.out.println("A little too low, guess higher!");
+            } else {
+                System.out.println("A little too high, guess lower!");
+            }
         }
-
-
-
-
-        // reject if string is input. error message "Thats not a number!"
-        // reject if int is higher than 100. error message "Lower than 100 please."
-        //if too high or too low, allow the user to input again.
-        // win message.
-
-
-
-
-
-
-
-
-
-
     }
 }
