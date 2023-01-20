@@ -12,7 +12,7 @@ public class SecretNumber {
         // generate random number.
 
         Random rand = new Random();
-        int secretInt = rand.nextInt(101) + 1;
+        int secretInt = rand.nextInt(100) + 1;
         System.out.println("system's secret number: " + secretInt);
 
         // use scanner to accept input.
@@ -24,10 +24,11 @@ public class SecretNumber {
         while (true) {
 
             int userGuess = Integer.parseInt(reader.nextLine());
+//             POST LAB: int userGuess = reader.nextInt(); - does not need be parsed like above, can use reader.nextInt();
             System.out.println("Your guess was: " + userGuess);
 
             if (userGuess == secretInt) {
-                System.out.println("Congratulations! ".toUpperCase() + "Guess you really are lucky");
+                System.out.println("Congratulations! ".toUpperCase() + "Guess you really are lucky.");
                 break;
             } else if (userGuess < secretInt) {
                 System.out.println("A little too low, guess higher!");
