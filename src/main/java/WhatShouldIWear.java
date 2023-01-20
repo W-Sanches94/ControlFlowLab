@@ -6,7 +6,7 @@ public class WhatShouldIWear {
         // Prompt User on: Weather and Temperature.
 
         System.out.println("What word would describe the weather today?");
-        System.out.println("please select from: sunny, cloudy, rainy and snowy.");
+        System.out.println("please select from: sunny, windy, rainy and snowy.");
 
         Scanner wReader = new Scanner(System.in);
         String userWeather = wReader.nextLine();
@@ -19,19 +19,31 @@ public class WhatShouldIWear {
 
         System.out.println("The weather is looking " + userWeather + " and the temperature seems to be around " + userTemperature + "\u00B0");
 
-        if (userWeather.equals("sunny") && userTemperature >= 20){
+        if (userWeather.equals("sunny") && userTemperature >= 20) {
             System.out.println("Its hot outside, consider short sleeves, sunglasses or a cap");
-            else if (userWeather.equals("cloudy") && userTemperature >= 10)
-                System.out.println("its warm outside, don't overdress and keep it cool");
-                else if (userWeather.equals("rainy") || userTemperature <= 9){
-                    System.out.println("Don't forget your umbrella");
-                    else (userWeather.equals("snowy") || userTemperature <= 5){
-                    System.out.println("Its really cold! Please take a beanie, scarf and gloves");
-                }
-                }
-                }
-            }
-        }
+        } else if (userWeather.equals("cloudy") && userTemperature >= 10) {
+            System.out.println("its warm outside, don't overdress and keep it cool");
+        } else if (userWeather.equals("rainy"));
+            System.out.println("Don't forget your umbrella");
+        {
+//        } else (userWeather.equals("snowy") || userTemperature <= 5);{
+//            System.out.println("Its really cold! Please take a beanie, scarf and gloves");
+//        }
 
+
+//        if (userWeather.equals("sunny"));{
+//            System.out.println("Consider a Cap and Sunglasses");
+//        }
+//        else if (userWeather.equals("windy"));{
+//            System.out.println("Consider a windbreaker and a scarf");
+//        }
+//        else if (userWeather.equals("rainy"));{
+//            System.out.println("Don't forget your umbrella");
+//        }
+//        else if (userWeather.equals("Snowy"));{
+//            System.out.println("Consider a beanie, gloves and a scarf");}
+
+        }
     }
 }
+
